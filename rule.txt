@@ -1,0 +1,34 @@
+Rule1: The Liberty Rule 
+Every stone remaining on the board must have at least one open point, called a liberty, directly 
+orthogonally adjacent (up, down, left, or right) or must be part of a connected group that has at least 
+one such open point (liberty) next to it. Stones or groups of stones which lose their last liberty are 
+removed from the board (called captured). 
+Based on the rule of liberty, players are NOT allowed to play any “suicide” moves.
+Rule 2: The “KO” Rule
+The KO rule resolves the situation: If one player captures the KO, the opponent is prohibited from 
+recapturing the KO immediately.
+Komi 
+Because Black has the advantage of playing the first move, awarding White some compensation is called 
+Komi. This is in the form of giving White a score compensation at the end of the game. In this homework 
+(a board size of 5x5), Komi for the White player is set to be 5/2 = 2.5. 
+Passing 
+A player may waive his/her right to make a move, called passing, when determining that the game offers 
+no further opportunities for profitable play. A player may pass his/her turn at any time. Usually, passing 
+is beneficial only at the end of the game, when further moves would be useless or even harmful to a 
+player's position.  
+Winning Condition
+“Partial” Area Scoring: A player's partial area score is the number of stones that the player has 
+occupied on the board. 
+Final Scoring: The Black player’s final score is the partial area score, while the White player’s final 
+score is the sum of the partial area score plus the score of compensation (Komi).  
+Data Structure:
+Input:
+A file named input.txt file contains:
+Line 1: A value of “1” or “2” indicating which color you play (Black=1, White=2) 
+Line 2-6: Description of the previous state of the game board, with 5 lines of 5 values each. 
+This is the state after your last move. (Black=1, White=2, Unoccupied=0) 
+Line 7-11: Description of the current state of the game board, with 5 lines of 5 values each. 
+This is the state after your opponent’s last move (Black=1, White=2, Unoccupied=0).  
+Output:
+To make a move, your agent should generate output.txt in the current directory.  - The format of placing a stone should be two integers, indicating i and j as in Figure 2, separated by a comma without whitespace.
+If your agent waives the right to move, it should write “PASS” (all letters must be in uppercase) 
